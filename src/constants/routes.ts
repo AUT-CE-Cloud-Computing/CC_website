@@ -3,6 +3,8 @@ import {Assignments} from '../pages/Assignmets'
 import { Presentations } from '../pages/Presentation'
 import { Schedule } from '../pages/Schedule'
 import {HomePage} from '../pages/Home';
+
+
 const spring2024 = {
     "name": "spring2024",
     key:134,
@@ -34,5 +36,7 @@ const spring2024 = {
     ]
    
 }
+
+export const default_path = spring2024.name
 
 export const routes = [spring2024]

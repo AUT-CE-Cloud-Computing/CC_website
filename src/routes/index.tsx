@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { Layout } from "../components/Layout";
-import { routes } from "../constants/routes";
+import { default_path, routes } from "../constants/routes";
 
 export const Routing:FC = () =>{
 
-    const default_path = "/spring2024"
+    
 
     Object.entries(routes).forEach((sem, route) => {
         console.log(sem);
@@ -13,12 +13,6 @@ export const Routing:FC = () =>{
         )
         
     })
-      {/* <Route path="spring2024" >
-                <Route index element={<h2>Home</h2>} />
-                <Route path="Assignments" element={<h2>Assignments</h2>} />
-              </Route> */}
-    
-
     return (
         <BrowserRouter>
           <Routes>
@@ -28,7 +22,6 @@ export const Routing:FC = () =>{
               {
                 routes.map(semester => 
                     <Route key={semester.key} path={semester.name}>
-                        {/* <Route path="Assignments" element={<h2>Assignments</h2>} /> */}
                        {
                             semester.paths.map(path => <Route index={path.exact} key={path.key} path={path.path} element={<path.component />} />)
                        }

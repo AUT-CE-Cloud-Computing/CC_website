@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for the menu
 import { IoIosCloudy } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { default_path, routes } from "../../../constants/routes";
 
 const Header = () => {
   const [HeaderOpen, setHeaderOpen] = useState(false);
 
-  const pages = ["Assignments", "Schedule", "Presentations", "Presentation Ideas", "Syllabus"]
+//   const pages = ["Assignments", "Schedule", "Presentations", "Presentation Ideas", "Syllabus"]
 
   return (
-    <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-800 mb-3">
+    <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-800">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <div className="flex text-slate-200 mx-7">
@@ -38,13 +39,14 @@ const Header = () => {
         >
           <ul className="flex flex-col lg:flex-row list-none lg:mr-auto lg:gap-18">
             {
-                pages.map((page, index) => 
-                <li className="nav-item" key={index}>
+                routes.filter(item => item.name == default_path)[0].paths
+                .map(route => 
+                <li className="nav-item" key={route.key}>
                 <Link
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gray-300 hover:text-gray-100"
-                  to = {`/spring2024/${page}`}
+                  to = {`/spring2024/${route.path}`}
                 >
-                  {page}
+                  {route.path}
                 </Link>
               </li>)
             }

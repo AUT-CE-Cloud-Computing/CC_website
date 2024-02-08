@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 import { default_path, routes } from "../../../constants/routes";
 
 const Header = () => {
-  const [HeaderOpen, setHeaderOpen] = useState(false);
+    const [HeaderOpen, setHeaderOpen] = useState(false);
 
 //   const pages = ["Assignments", "Schedule", "Presentations", "Presentation Ideas", "Syllabus"]
 
   return (
-    <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-800">
+    <nav className="fixed w-full flex flex-wrap items-center justify-between px-2 py-3 bg-blue-800 ">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <div className="flex text-slate-200 mx-7">

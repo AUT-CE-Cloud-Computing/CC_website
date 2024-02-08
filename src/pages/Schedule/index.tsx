@@ -1,7 +1,10 @@
 import { FC } from "react";
+import { Post } from "../../components/Base/Post";
 
 export const Schedule:FC = () => {
     return (
-        <h2>Schedule</h2>
+        <Post>
+            <h2>Schedule</h2>
+        </Post>
     )
 }

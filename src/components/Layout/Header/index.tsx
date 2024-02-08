@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for the menu
 import { IoIosCloudy } from "react-icons/io";
+import { FaDocker } from "react-icons/fa";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { default_path, routes } from "../../../constants/routes";
+
+import docker from '../../../assets/docker.png';
 
 const Header = () => {
     const [HeaderOpen, setHeaderOpen] = useState(false);
@@ -14,11 +17,13 @@ const location = useLocation();
     
 
   return (
-    <nav className="fixed w-full flex flex-wrap items-center justify-between px-2 py-3 bg-blue-800 ">
+    <nav className="sticky top-0 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-blue-800 ">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <div className="flex text-slate-200 mx-7">
             <IoIosCloudy className="scale-[2] translate-x-10" />
+            {/* <FaDocker className="" /> */}
+            
             <Link
               className="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
               to="/"
@@ -54,7 +59,7 @@ const location = useLocation();
                 </Link>
               </li>)
             }
-            
+            {/* <img src={docker} alt="docker-moby" className="w-8 h-4 translate-y-6 scale-x-[-1]"/> */}
           </ul>
         </div>
       </div>

@@ -7,7 +7,7 @@ export const Layout: FC = () => {
   return (
     <main>
       <Header />
-      <div className="min-h-[calc(100vh-80px)] bg-gray-200 flex justify-center items-center">
+      <div className="min-h-[calc(100vh-150px)] bg-gray-200">
         <Outlet />
       </div>
       <Footer />

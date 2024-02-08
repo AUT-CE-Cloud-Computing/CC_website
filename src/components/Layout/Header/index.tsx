@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for the menu
 import { IoIosCloudy } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { default_path, routes } from "../../../constants/routes";
 
 const Header = () => {
     const [HeaderOpen, setHeaderOpen] = useState(false);
 
 //   const pages = ["Assignments", "Schedule", "Presentations", "Presentation Ideas", "Syllabus"]
+
+const location = useLocation();
+    const  pathname  = location.pathname.replace(`/${default_path}/`, "");
+    
 
   return (
     <nav className="fixed w-full flex flex-wrap items-center justify-between px-2 py-3 bg-blue-800 ">
@@ -43,7 +47,7 @@ const Header = () => {
                 .map(route => 
                 <li className="nav-item" key={route.key}>
                 <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gray-300 hover:text-gray-100"
+                  className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug ${pathname == route.path ? 'text-gray-100' : 'text-gray-300 hover:text-gray-100'}`}
                   to = {`/spring2024/${route.path}`}
                 >
                   {route.path}

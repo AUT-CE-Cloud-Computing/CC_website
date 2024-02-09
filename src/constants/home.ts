@@ -51,3 +51,11 @@ export const OverView = [
         key:18
     }
 ]
+
+export const Instructors = [
+    {
+        "Name" : "Dr.Ahmad javadi",
+        "Photo": "",
+        "Office Hours": "Moday 2:00-3:00 P.M"
+    }
+]

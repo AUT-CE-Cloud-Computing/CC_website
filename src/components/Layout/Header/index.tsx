@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for the menu
 import { IoIosCloudy } from "react-icons/io";
 import { FaDocker } from "react-icons/fa";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { default_path, routes } from "../../../constants/routes";
 
 import docker from '../../../assets/docker.png';
@@ -17,7 +17,7 @@ const location = useLocation();
     
 
   return (
-    <nav className="sticky top-0 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-blue-800 ">
+    <nav className="z-20 sticky top-0 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-blue-800 ">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <div className="flex text-slate-200 mx-7">

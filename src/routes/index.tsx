@@ -2,6 +2,7 @@ import { FC } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { Layout } from "../components/Layout";
 import { default_path, routes } from "../constants/routes";
+import { NotFound } from "../pages/404";
 
 export const Routing:FC = () =>{
 
@@ -28,6 +29,7 @@ export const Routing:FC = () =>{
                     </Route>
                 )
               }
+              <Route path="*" element={<NotFound />}/>
             </Route>
           </Routes>
         </BrowserRouter>

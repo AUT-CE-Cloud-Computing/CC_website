@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import { HiUserGroup } from "react-icons/hi2";
 import { createClient } from "@supabase/supabase-js";
 
+
+import profile from '../../../assets/profile.png';
+
 const supabase = createClient('https://niudmjkwjidiapqarrkf.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5pdWRtamt3amlkaWFwcWFycmtmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc4NDY0NDMsImV4cCI6MjAyMzQyMjQ0M30.mLeRIFUlGy-6yRGXRrr2Pir2OZ5NMLoV4M-fTQdGhT0')
 
 
@@ -53,7 +56,7 @@ export const TaTable = () => {
                   <div className="w-10 h-10">
                     <img
                       className="w-full h-full rounded-full"
-                      src={TA?.avatar}
+                      src={TA?.avatar ? TA.avatar : profile}
                       alt="Profile"
                     />
                   </div>

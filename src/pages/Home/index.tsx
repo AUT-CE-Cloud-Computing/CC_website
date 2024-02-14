@@ -21,7 +21,7 @@ export const HomePage: FC = () => {
     <>
       <HeroSection OnClick={onClick} />
       <Post>
-        <section className="flex gap-2 text-xl items-center">
+        <section className="flex gap-2 text-xl items-center my-4">
           <FaHome />
           <h1 ref={ref} className="font-bold ">
             Course Overview
@@ -31,7 +31,7 @@ export const HomePage: FC = () => {
           {info}
         </p>
         <Line />
-        <section className="flex gap-2 text-xl items-center">
+        <section className="flex gap-2 text-xl items-center my-4">
           <HiAcademicCap />
           <h1 className="font-bold ">
             What You will Learn

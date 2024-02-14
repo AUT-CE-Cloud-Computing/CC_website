@@ -6,7 +6,7 @@ export const info = `This Course is on introducing fundamentals of Cloud Computi
 related technologies; starting by diving deep inside the topic of
 virtualization and explaining different kinds of virtualization,
 moving on to abstract ways of virtualization, such as using docker
-instead. by introcing docker, we then explain more and more on docker
+instead. by introducing docker, we then explain more and more on docker
 and kubernetes. then we forward to Big Data Analytics and tools such
 as Apache Spark & Hadoop. also a new programming paradigm Called 
  MapReduce 

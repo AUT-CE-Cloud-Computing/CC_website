@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="md:self-end p-0 mx-10 text-[0.5rem]">
+        <div className="self-center p-0 mx-10 text-[0.5rem]">
           made with ❤️ by{" "}
           <a href="http://github.com/mr-amirfazel" target="_blank">
             mr-amirfazel

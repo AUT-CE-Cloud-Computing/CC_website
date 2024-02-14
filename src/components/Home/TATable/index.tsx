@@ -1,14 +1,32 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
-import { AXIOS } from "../../../config/axios.config";
 import { HiUserGroup } from "react-icons/hi2";
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient('https://niudmjkwjidiapqarrkf.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5pdWRtamt3amlkaWFwcWFycmtmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc4NDY0NDMsImV4cCI6MjAyMzQyMjQ0M30.mLeRIFUlGy-6yRGXRrr2Pir2OZ5NMLoV4M-fTQdGhT0')
+
+
+
+const  fetchTeachingAssistants = async () => {
+    const { data: TA, error } = await supabase
+  .from('TA')
+  .select('*')
+
+  return {TA, error}
+}
+
 
 export const TaTable = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<any>();
+
 
   useEffect(() => {
-    AXIOS.get("/tas?populate=*").then((result) => {setData(result.data.data); console.log(result.data);
-    });
+    fetchTeachingAssistants().then(res => setData(res.TA))
   }, []);
+
+  
+
+  
 
   return (
     // Responsive container
@@ -28,27 +46,29 @@ export const TaTable = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((TA: any) => (
-            <tr className="text-gray-700">
+          {data?.map((TA: any) => (
+            <tr className="text-gray-700" key={TA.id}>
               <td className="px-4 py-3 border-b border-gray-200">
                 <div className="flex items-center">
                   <div className="w-10 h-10">
                     <img
                       className="w-full h-full rounded-full"
-                      src={`http://localhost:1337${TA.attributes.image.data.attributes.url}`}
+                      src={TA?.avatar}
                       alt="Profile"
                     />
                   </div>
                   <div className="pl-3">
                     <div className="text-sm font-medium leading-5">
-                      {TA.attributes.name}
+                      {TA?.name}
                     </div>
                   </div>
                 </div>
               </td>
 
               <td className="px-4 py-3 border-b text-sm border-gray-200">
-                {TA.attributes.telegram_Id}
+                <a className="font-semibold text-blue-500" href={`https://t.me/${TA?.telegram_ID}`} target="_blank">
+                  @{TA?.telegram_ID}
+                </a>
               </td>
             </tr>
           ))}

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { FC, useRef } from "react";
 import { Post } from "../../components/Base/Post";
 import { FaHome } from "react-icons/fa";
@@ -11,7 +12,7 @@ import  { InstructorTable } from "../../components/Home/InstructorTable";
 import { TaTable } from "../../components/Home/TATable";
 
 export const HomePage: FC = () => {
-  const ref = useRef<null | HTMLElement>(null);
+  const ref = useRef<any>(null);
 
   const onClick = () => {
     ref.current!.scrollIntoView({ behavior: "smooth" });

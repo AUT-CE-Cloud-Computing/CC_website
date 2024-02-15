@@ -1,4 +1,3 @@
-import { FaHeadphonesSimple } from 'react-icons/fa6'
 import {Assignments} from '../pages/Assignmets'
 import { Presentations } from '../pages/Presentation'
 import { Schedule } from '../pages/Schedule'

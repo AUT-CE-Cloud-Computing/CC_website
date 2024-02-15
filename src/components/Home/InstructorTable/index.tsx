@@ -1,4 +1,3 @@
-import React from 'react';
 import { Instructors } from '../../../constants/home';
 import { PiChalkboardTeacherFill } from "react-icons/pi";
 

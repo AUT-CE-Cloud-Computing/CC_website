@@ -11,7 +11,7 @@ import { fetchResource } from "../../../hooks/useResource";
 
 export const TaTable = () => {
   const [data, setData] = useState<any>();
-  const [error, setError] = useState<any>();
+  const [, setError] = useState<any>();
 
   useMemo(() => {
     fetchResource("TA").then((result) => {

@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC } from "react";
 import classes from "./home.module.css";
-import { Link } from "react-router-dom";
 
 interface HeroSectionProps extends React.PropsWithChildren {
   OnClick: any;

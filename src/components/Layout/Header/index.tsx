@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for the menu
 import { IoIosCloudy } from "react-icons/io";
-import { FaDocker } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { default_path, routes } from "../../../constants/routes";
 
-import docker from '../../../assets/docker.png';
 
 const Header = () => {
     const [HeaderOpen, setHeaderOpen] = useState(false);

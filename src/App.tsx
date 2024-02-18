@@ -7,9 +7,9 @@ import { AppContextProvider } from "./context/store";
 
 function App() {
   return (
-    <AppContextProvider>
-      <Routing />
-    </AppContextProvider>
+      <AppContextProvider>
+        <Routing />
+      </AppContextProvider>
   );
 }
 

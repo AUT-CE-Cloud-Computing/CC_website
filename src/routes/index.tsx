@@ -14,8 +14,9 @@ export const Routing:FC = () =>{
         )
         
     })
-    return (
-        <BrowserRouter>
+    return (<BrowserRouter>
+        
+        
           <Routes>
             <Route path="" element={<Layout />}>
               <Route index element={<Navigate to={default_path} />} />
@@ -32,6 +33,7 @@ export const Routing:FC = () =>{
               <Route path="*" element={<NotFound />}/>
             </Route>
           </Routes>
+          
         </BrowserRouter>
       )
 }

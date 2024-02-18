@@ -1,37 +1,22 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useMemo, useState } from "react";
-import { HiUserGroup } from "react-icons/hi2";
 
 import profile from "../../../assets/profile.png";
-import { fetchResource } from "../../../hooks/useResource";
+import { useSupabaseData } from "../../../hooks/useSupabase";
+import { Loader } from "../../Base/Loader";
 
 
 
 
 export const TaTable = () => {
-  const [data, setData] = useState<any>();
-  const [, setError] = useState<any>();
+  const { data, loading, error } = useSupabaseData('TA');
 
-  useMemo(() => {
-    fetchResource("TA").then((result) => {
-      setData(result.result);
-      setError(result.error);
-
-      return result.result
-    });
-  }, [data])
-  useEffect(() => {
-    // fetchTeachingAssistants().then(res => setData(res.TA))
-  }, []);
+  if (loading) return <Loader />;
+  if (error) return <div>Error: {error!.message}</div>;
 
   return (
     // Responsive container
     <>
-      <div className="flex gap-3 text-xl items-center">
-        <HiUserGroup />
-        <h1 className="font-bold">TA's</h1>
-      </div>
       <div className="overflow-x-auto">
         <table className="min-w-full table-auto text-left whitespace-no-wrap">
           <thead>

@@ -10,6 +10,7 @@ import { Line } from "../../components/Base/Line";
 import { CloudItemsList } from "../../components/Home/WYWL";
 import  { InstructorTable } from "../../components/Home/InstructorTable";
 import { TaTable } from "../../components/Home/TATable";
+import { HiUserGroup } from "react-icons/hi2";
 
 export const HomePage: FC = () => {
   const ref = useRef<any>(null);
@@ -43,6 +44,10 @@ export const HomePage: FC = () => {
         <Line />
         <InstructorTable />
         <Line />
+        <div className="flex gap-3 text-xl items-center">
+        <HiUserGroup />
+        <h1 className="font-bold">TA's</h1>
+      </div>
         <TaTable />
       </Post>
     </>

@@ -14,12 +14,13 @@ export type Assignment = {
     release_Date: Date;
 }
 
-export type PresentationCard = {
-    id: number,
+export type Presentation = {
+    id: number;
     name: string;
     topic: string;
     slides?: string;
     demo?: string;
-    topic_cover: string;
-    avatar: string;
+    topic_cover?: string;
+    avatar?: string;
+    codes? : string;
 }

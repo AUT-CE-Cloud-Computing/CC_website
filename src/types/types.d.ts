@@ -24,3 +24,9 @@ export type Presentation = {
     avatar?: string;
     codes? : string;
 }
+
+export type SheduleItem = {
+    id: number;
+    title: string;
+    slide_link: string;
+}

@@ -5,15 +5,15 @@ import { FaFileVideo } from "react-icons/fa6";
 import { Tooltip } from "@mui/material";
 import { SiGithub } from "react-icons/si";
 
-import pattern from '../../../assets/pattern.webp'
-import default_profile from '../../../assets/profile.png'
+import pattern from "../../../assets/pattern.webp";
+import default_profile from "../../../assets/profile.png";
 
 interface PresentCard extends PropsWithChildren {
   presentation: Presentation;
 }
 export const PresentCard: FC<PresentCard> = ({ presentation }) => {
   return (
-    <div className="max-w-xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white shadow-xl rounded-lg text-gray-900">
+    <div className="hover:scale-[1.02] transition-[3s] ease-linear cursor-pointer max-w-xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white shadow-xl rounded-lg text-gray-900">
       <div className="rounded-t-lg h-32 overflow-hidden">
         <img
           className="object-cover object-top w-full"

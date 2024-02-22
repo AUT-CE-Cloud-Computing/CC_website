@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from "react";
 import { Presentation } from "../../../types/types";
-import { PresentCard } from "../PresentCart";
+import { PresentCard } from "../PresentCard";
 import { Loader } from "../../Base/Loader";
 
 interface PresentationsProps extends PropsWithChildren {

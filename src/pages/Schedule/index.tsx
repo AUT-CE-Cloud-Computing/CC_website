@@ -5,9 +5,7 @@ import { ScheduleTable } from "../../components/Shedule/ScheduleTable";
 import { useSupabaseData } from "../../hooks/useSupabase";
 
 export const Schedule: FC = () => {
-
-
-    const { data, loading, error } = useSupabaseData('Shedule');
+  const { data, loading, error } = useSupabaseData("Shedule");
 
   return (
     <Post>

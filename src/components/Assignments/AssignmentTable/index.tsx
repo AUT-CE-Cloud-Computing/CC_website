@@ -1,29 +1,30 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { FaRegEdit } from "react-icons/fa";
-import { useSupabaseData } from "../../../hooks/useSupabase";
+
 import { Loader } from "../../Base/Loader";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { Assignment } from "../../../types/types";
 
-export const AssignmentsTable: FC = () => {
+interface AssignmentsTableProps extends PropsWithChildren{
+    assignments: Assignment[],
+    error: Error | null,
+    loading: boolean,
+}
 
-    const { data, loading, error } = useSupabaseData('Assignments');
+export const AssignmentsTable: FC<AssignmentsTableProps> = ({assignments, error, loading}) => {
+
 
   if (loading) return <Loader />;
   if (error) return <div>Error: {error!.message}</div>;
 
-  if (data.length == 0) 
+  if (assignments.length == 0) 
     return <p>No assignments yet</p>
 
 
   return (
     <>
-      <div className="flex gap-3 text-xl items-center">
-        <FaRegEdit />
-        <h1 className="font-bold">Assignments</h1>
-      </div>
+      
       <div className="overflow-x-auto m-4 rounded-md">
         <table className="min-w-full table-auto text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -40,7 +41,7 @@ export const AssignmentsTable: FC = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((assignment: Assignment) => (
+            {assignments.map((assignment: Assignment) => (
               <tr
                 key={assignment.id}
                 className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"

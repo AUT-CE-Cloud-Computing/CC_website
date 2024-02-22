@@ -1,12 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect, useMemo } from 'react';
 import { createClient } from "@supabase/supabase-js";
-import { TA } from '../types/home.types';
 
 const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_TOKEN!)
 
 export const useSupabaseData = (tableName: string) => {
-  const [data, setData] = useState<TA[]>([]);
+  const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 

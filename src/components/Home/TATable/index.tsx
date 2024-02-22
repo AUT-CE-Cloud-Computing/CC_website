@@ -5,6 +5,7 @@ import { HiUserGroup } from "react-icons/hi2";
 import profile from "../../../assets/profile.png";
 import { useSupabaseData } from "../../../hooks/useSupabase";
 import { Loader } from "../../Base/Loader";
+import { TA } from "../../../types/types";
 
 
 
@@ -31,7 +32,7 @@ export const TaTable = () => {
             </tr>
           </thead>
           <tbody>
-            {data?.map((TA: any) => (
+            {data?.map((TA: TA) => (
               <tr className="text-gray-700" key={TA.id}>
                 <td className="px-4 py-3 border-b border-gray-200">
                   <div className="flex items-center">

@@ -13,3 +13,13 @@ export type Assignment = {
     due_Date: string;
     release_Date: Date;
 }
+
+export type PresentationCard = {
+    id: number,
+    name: string;
+    topic: string;
+    slides?: string;
+    demo?: string;
+    topic_cover: string;
+    avatar: string;
+}

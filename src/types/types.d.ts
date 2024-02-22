@@ -30,3 +30,10 @@ export type SheduleItem = {
     title: string;
     slide_link: string;
 }
+
+export type CourseMaterial = {
+    id: number;
+    icon: IconType;
+    title: string;
+    to: string;
+}

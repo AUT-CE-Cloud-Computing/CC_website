@@ -3,6 +3,8 @@ import { Presentations } from '../pages/Presentation'
 import { Schedule } from '../pages/Schedule'
 import {HomePage} from '../pages/Home';
 import { UsefulContent } from '../pages/Usefulcontent';
+import { routePath } from './routPath';
+
 
 
 const spring2024 = {
@@ -10,31 +12,31 @@ const spring2024 = {
     key:134,
     paths: [
         {
-            path: 'Assignments',
+            path: routePath.Assignments,
             component: Assignments,
             exact: false,
             key: 123
         },
         {
-            path: 'Presentations',
+            path: routePath.Presentations,
             component: Presentations,
             exact: false,
             key: 122
         },
         {
-            path: 'Schedule',
+            path: routePath.Schedule,
             component: Schedule,
             exact: false,
             key: 133
         },
         {
-            path: '',
+            path: routePath.Home,
             component: HomePage,
             exact: true,
             key: 103
         },
         {
-            path: 'usefulcontent',
+            path: routePath.UsefulContent,
             component: UsefulContent,
             exact: false,
             key: 104

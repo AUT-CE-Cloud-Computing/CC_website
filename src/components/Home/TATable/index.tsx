@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { HiUserGroup } from "react-icons/hi2";
 import profile from "../../../assets/profile.png";
 import { useSupabaseData } from "../../../hooks/useSupabase";
 import { Loader } from "../../Base/Loader";
@@ -17,6 +18,10 @@ export const TaTable = () => {
   return (
     // Responsive container
     <>
+        <div className="flex gap-3 text-xl items-center">
+          <HiUserGroup />
+          <h1 className="font-bold">TA's</h1>
+        </div>
       <div className="overflow-x-auto">
         <table className="min-w-full table-auto text-left whitespace-no-wrap">
           <thead>

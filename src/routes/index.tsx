@@ -8,8 +8,7 @@ export const Routing:FC = () =>{
 
     
 
-    Object.entries(routes).forEach((sem, route) => {
-        console.log(sem);
+    Object.entries(routes).forEach((_, route) => {
         Object.entries(route).forEach((path, comp) => console.log(path[0], comp)
         )
         

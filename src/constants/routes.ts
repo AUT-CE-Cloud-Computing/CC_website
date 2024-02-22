@@ -2,6 +2,7 @@ import {Assignments} from '../pages/Assignmets'
 import { Presentations } from '../pages/Presentation'
 import { Schedule } from '../pages/Schedule'
 import {HomePage} from '../pages/Home';
+import { UsefulContent } from '../pages/Usefulcontent';
 
 
 const spring2024 = {
@@ -31,6 +32,12 @@ const spring2024 = {
             component: HomePage,
             exact: true,
             key: 103
+        },
+        {
+            path: 'usefulcontent',
+            component: UsefulContent,
+            exact: false,
+            key: 104
         },
     ]
    

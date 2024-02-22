@@ -8,13 +8,13 @@ interface HeroSectionProps extends React.PropsWithChildren {
 const HeroSection: FC<HeroSectionProps> = (props) => {
   return (
     <div
-      className={`${classes.hero} min-h-[70vh] relative flex flex-col justify-center border-blue-950 border-b-[16px]`}
+      className={`${classes.hero} min-h-[55vh] relative flex flex-col justify-center border-blue-950 border-b-[16px]`}
     >
       <div className="container font-serif h-full mx-auto px-6 md:px-12 xl:px-32 z-10 flex flex-col justify-center items-start">
-        <h1 className="text-4xl font-bold text-blue-900 mb-2">
-          Welcome to <span className="font-bold text-6xl">Cloud Computing </span>Course <br /> Website
+        <h1 className="text-4xl font-bold text-white mb-2">
+          Welcome to <span className="font-bold text-5xl">Cloud Computing </span>Course <br /> Website
         </h1>
-        <p className="text-2xl text-black">
+        <p className="text-2xl text-white">
           Explore our Cloud Computing course materials and assignments.
         </p>
         {/* Call to action button */}

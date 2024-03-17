@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import DepLogo from "../../../assets/dep-logo-white.png";
 import UniLogo from "../../../assets/aut-logo-white.png";
-import { SiTelegram } from "react-icons/si";
+// import { SiTelegram } from "react-icons/si";
 
 const Footer: React.FC = () => {
   return (
@@ -21,24 +21,28 @@ const Footer: React.FC = () => {
             </Link>
           </div>
 
-          <div>
+          {/* <div>
             <a href="http://t.me/CC_1403" target="_blank">
               <SiTelegram className="scale-[1.75]" />
             </a>
-          </div>
+          </div> */}
 
-          <div className="flex  mx-7">
-            <img src={DepLogo} className="h-16 w-16" alt="computer engineering department" />
+          <div className="flex  mx-7 gap-10">
+            <img
+              src={DepLogo}
+              className="h-16 w-16"
+              alt="computer engineering department"
+            />
             <img src={UniLogo} className="h-16 w-16" alt="AUT logo" />
           </div>
         </div>
 
-        <div className="self-center p-0 mx-10 text-[0.5rem]">
+        {/* <div className="self-center p-0 mx-10 text-[0.5rem]">
           made with ❤️ by{" "}
           <a href="http://github.com/mr-amirfazel" target="_blank">
             mr-amirfazel
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

@@ -43,7 +43,7 @@ export const CloudItems = [
     key: 13,
   },
   {
-    name: "Big Data & Analyics",
+    name: "Big Data & Analytics",
     Icon: BiSolidAnalyse,
     key: 14,
   },

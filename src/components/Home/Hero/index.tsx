@@ -12,7 +12,7 @@ const HeroSection: FC<HeroSectionProps> = (props) => {
     >
       <div className="container font-serif h-full mx-auto px-6 md:px-12 xl:px-32 z-10 flex flex-col justify-center items-start">
         <h1 className="text-4xl font-bold text-white mb-2">
-          Welcome to <span className="font-bold text-5xl">Cloud Computing </span>Course <br /> Website
+          <span className="font-bold text-5xl">Cloud Computing </span>Course <br />
         </h1>
         <p className="text-2xl text-white">
           Explore our Cloud Computing course materials and assignments.

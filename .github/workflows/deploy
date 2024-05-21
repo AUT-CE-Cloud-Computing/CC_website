@@ -1,5 +1,4 @@
-# Simple workflow for deploying 
-#static content to GitHub Pages
+# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
@@ -20,11 +19,10 @@ permissions:
 concurrency:
   group: 'pages'
   cancel-in-progress: true
-    
 #Allow repo secrets
 env:
-  VITE_SUPABASE_URL = ${{ secrets.VITE_SUPABASE_URL }}
-  VITE_SUPABASE_TOKEN = ${{ secrets.VITE_SUPABASE_TOKEN }}
+  VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+  VITE_SUPABASE_TOKEN: ${{ secrets.VITE_SUPABASE_TOKEN }}
 
 jobs:
   # Single deploy job since we're just deploying

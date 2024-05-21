@@ -48,33 +48,44 @@ const Header = () => {
           <ul className="flex flex-col lg:flex-row list-none lg:mr-auto lg:gap-18">
             {routes
               .filter((item) => item.name == default_path)[0]
-              .paths.map((route) => (
-                <li className="nav-item" key={route.key}>
-                  <Link
-                    className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug ${
-                      pathname == route.path
-                        ? "text-gray-100"
-                        : "text-gray-300 hover:text-gray-100"
-                    }`}
-                    to={`/spring2024/${route.path}`}
-                  >
-                    {route.path}
-                  </Link>
-                </li>
-              ))}
+              .paths.map(
+                (route) =>
+                  route.path != "" && (
+                    <li className="nav-item" key={route.key}>
+                      <Link
+                        className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug ${
+                          pathname == route.path
+                            ? "text-gray-100"
+                            : "text-gray-300 hover:text-gray-100"
+                        }`}
+                        to={`/spring2024/${route.path}`}
+                      >
+                        {route.path}
+                      </Link>
+                    </li>
+                  )
+              )}
             {/* <img src={docker} alt="docker-moby" className="w-8 h-4 translate-y-6 scale-x-[-1]"/> */}
           </ul>
         </div>
 
         <div className="flex  mx-7 gap-2">
-          <a href="https://ce.aut.ac.ir/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://ce.aut.ac.ir/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src={DepLogo}
               className="h-10 w-10"
               alt="computer engineering department"
             />
           </a>
-          <a href="https://aut.ac.ir/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://aut.ac.ir/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={UniLogo} className="h-10 w-10" alt="AUT logo" />
           </a>
         </div>

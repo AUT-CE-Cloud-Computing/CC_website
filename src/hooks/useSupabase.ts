@@ -2,7 +2,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { createClient } from "@supabase/supabase-js";
 
-const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_TOKEN!)
+const supabase = createClient(import.meta.env.VITE_SUPABASE_URL!, import.meta.env.VITE_SUPABASE_TOKEN!)
 
 export const useSupabaseData = (tableName: string) => {
   const [data, setData] = useState<any[]>([]);

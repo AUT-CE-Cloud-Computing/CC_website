@@ -10,5 +10,6 @@ export default defineConfig(({ mode }) => {
       'process.env.SUPABASE_TOKEN': JSON.stringify(env.SUPABASE_TOKEN)
     },
     plugins: [react()],
+    base: "/CC_website"
   }
 })

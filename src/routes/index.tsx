@@ -13,7 +13,7 @@ export const Routing:FC = () =>{
         )
         
     })
-    return (<BrowserRouter>
+    return (<BrowserRouter basename={import.meta.env.DEV ? '/' : '/CC_website/'}>
         
         
           <Routes>

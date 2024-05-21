@@ -33,7 +33,7 @@ export const HomePage: FC = () => {
         <Line />
         <section className="flex gap-2 text-xl items-center my-4">
           <HiAcademicCap />
-          <h1 className="font-bold ">What You will Learn</h1>
+          <h1 className="font-bold "> What You will Learn </h1>
         </section>
         <CloudItemsList />
 

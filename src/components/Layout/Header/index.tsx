@@ -69,7 +69,7 @@ const Header = () => {
           </ul>
         </div>
 
-        <div className="flex  mx-7 gap-2">
+        <div className="hidden lg:flex  mx-7 gap-2">
           <a
             href="https://ce.aut.ac.ir/"
             target="_blank"

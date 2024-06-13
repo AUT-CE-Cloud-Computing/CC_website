@@ -37,3 +37,10 @@ export type CourseMaterial = {
     title: string;
     to: string;
 }
+
+export type UsefulContent = {
+    cover: string;
+    title: string;
+    description: string;
+    link: string;
+}

@@ -1,7 +1,17 @@
 import { FC } from "react";
 import { Post } from "../../components/Base/Post";
+import { Content } from "../../components/Useful-content/content";
+import { useSupabaseData } from "../../hooks/useSupabase";
+import { Loader } from "../../components/Base/Loader";
 
 export const UsefulContent:FC = () => {
+
+    const { data, loading, error } = useSupabaseData('content');
+
+    console.log(data);
+    
+
+
     return (
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-wrap -mx-4">
@@ -10,9 +20,11 @@ export const UsefulContent:FC = () => {
               <Post>
               <h1 className="text-2xl font-bold mb-4">Useful Content</h1>
               {/* Add your main content here */}
-              <div className="mb-4">
+              <div className="mb-4 flex flex-col gap-10">
                 {/* Your main section content */}
-                
+                {loading && <Loader />}
+                {error && <div>Error: {error!.message}</div>}
+                {data.map(item => <Content key={item.id} content={item}/>)}
               </div>
               </Post>
             </main>

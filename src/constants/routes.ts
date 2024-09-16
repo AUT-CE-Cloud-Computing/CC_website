@@ -45,6 +45,44 @@ const spring2024 = {
    
 }
 
-export const default_path = spring2024.name
+const fall2024 = {
+    "name": "fall2024",
+    key:134,
+    paths: [
+        {
+            path: routePath.Assignments,
+            component: Assignments,
+            exact: false,
+            key: 123
+        },
+        {
+            path: routePath.Presentations,
+            component: Presentations,
+            exact: false,
+            key: 122
+        },
+        {
+            path: routePath.Schedule,
+            component: Schedule,
+            exact: false,
+            key: 133
+        },
+        {
+            path: routePath.Home,
+            component: HomePage,
+            exact: true,
+            key: 103
+        },
+        {
+            path: routePath.UsefulContent,
+            component: UsefulContent,
+            exact: false,
+            key: 104
+        },
+    ]
+   
+}
 
-export const routes = [spring2024]
+export const default_path = fall2024.name
+
+export const routes = [spring2024, fall2024]

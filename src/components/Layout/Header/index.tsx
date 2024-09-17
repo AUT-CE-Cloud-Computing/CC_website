@@ -58,7 +58,7 @@ const Header = () => {
                             ? "text-gray-100"
                             : "text-gray-300 hover:text-gray-100"
                         }`}
-                        to={`/spring2024/${route.path}`}
+                        to={`${route.path}`}
                       >
                         {route.path}
                       </Link>

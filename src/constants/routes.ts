@@ -47,7 +47,7 @@ const spring2024 = {
 
 const fall2024 = {
     "name": "fall2024",
-    key:134,
+    key:135,
     paths: [
         {
             path: routePath.Assignments,

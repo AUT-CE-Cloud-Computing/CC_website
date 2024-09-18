@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect, useMemo } from 'react';
 import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(import.meta.env.VITE_SUPABASE_URL!, import.meta.env.VITE_SUPABASE_TOKEN!)
 
-export const useSupabaseData = (tableName: string) => {
+export const useSupabaseData = (tableName: string, options: any = null) => {
   const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
@@ -13,13 +14,29 @@ export const useSupabaseData = (tableName: string) => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: retrievedData, error } = await supabase
+        if (options){
+          const { data: retrievedData, error } = await supabase
           .from(tableName)
           .select("*")
+          .eq('semester', options?.semester)
+
+          if (error) throw error;
+          setData(retrievedData);
+        }
+        else
+          {
+            const { data: retrievedData, error } = await supabase
+          .from(tableName)
+          .select("*")
+          if (error) throw error;
+          setData(retrievedData);
+          }
+        
+          
           
 
-        if (error) throw error;
-        setData(retrievedData);
+        // if (error) throw error;
+        // setData(retrievedData);
       } catch (error: any) {
         setError(error);
       } finally {

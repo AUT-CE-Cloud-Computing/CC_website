@@ -29,6 +29,7 @@ export type SheduleItem = {
     id: number;
     title: string;
     slide_link: string;
+    semester: string;
 }
 
 export type CourseMaterial = {

@@ -14,6 +14,7 @@ export const ScheduleTable: FC<ScheduleTableProps> = ({ sheduleitems, loading, e
   if (error) return <div>Error: {error!.message}</div>;
 
   if (sheduleitems.length == 0) return <p>No Shedules yet</p>;
+  
   return (
     <>
       <div className="overflow-x-auto m-4 rounded-md">
